@@ -251,7 +251,14 @@ export default function AboutSection() {
           </Tabs>
 
           <div className="mt-8 flex justify-center">
-            <CyberButton>Download Full CV</CyberButton>
+            <CyberButton onClick={() => {
+              const link = document.createElement('a');
+              link.href = '/Newwithlink.pdf';
+              link.download = 'Newwithlink.pdf';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}>Download Full CV</CyberButton>
           </div>
         </motion.div>
       </div>

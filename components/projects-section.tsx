@@ -23,7 +23,7 @@ export default function ProjectsSection() {
       category: "ai",
       links: {
         github: "https://github.com/Shayan5422/MCP_MAC_USE",
-        live: "#",
+        live: "https://www.linkedin.com/posts/shayan-hashemi-5308081b1_macos-aiinnovation-customdevelopment-activity-7317220263010471937-MrTA?utm_source=share&utm_medium=member_desktop&rcm=ACoAADFraPQBLoxdHsfQpTxjdQ403u9R40EJ3II",
       },
     },
     {
@@ -35,7 +35,7 @@ export default function ProjectsSection() {
       category: "ai",
       links: {
         github: "https://github.com/Shayan5422/Gemini-Translator",
-        live: "#",
+        live: "https://chromewebstore.google.com/detail/gemini-translator/mgckajgaoebghjjlmlbnifapbbmgljdk?utm_source=ext_app_menu",
       },
     },
     {
@@ -47,7 +47,7 @@ export default function ProjectsSection() {
       category: "ai",
       links: {
         github: "https://github.com/Shayan5422/Visual-RAG",
-        live: "#",
+        live: "https://www.linkedin.com/posts/shayan-hashemi-5308081b1_ai-machinelearning-computervision-activity-7302765015449624576-htrR?utm_source=share&utm_medium=member_desktop&rcm=ACoAADFraPQBLoxdHsfQpTxjdQ403u9R40EJ3II",
       },
     },
     {
@@ -59,7 +59,19 @@ export default function ProjectsSection() {
       category: "data",
       links: {
         github: "https://github.com/Shayan5422/Text_to_SQL",
-        live: "#",
+        live: "https://www.linkedin.com/posts/shayan-hashemi-5308081b1_i-am-pleased-to-announce-the-completion-of-activity-7284937484336070657-_QrB?utm_source=share&utm_medium=member_desktop&rcm=ACoAADFraPQBLoxdHsfQpTxjdQ403u9R40EJ3II",
+      },
+    },
+    {
+      title: "CV Maker",
+      description:
+        "An AI-powered website that helps you design resumes and write cover letters.",
+      icon: <Globe className="h-16 w-16 text-green-400" />,
+      tags: ["Python", "AI", "NLP", "Angular", "Web Development"],
+      category: "web",
+      links: {
+        github: "https://github.com/Shayan5422/CV_maker",
+        live: "https://cv-creative.vercel.app/",
       },
     },
     {
@@ -71,7 +83,7 @@ export default function ProjectsSection() {
       category: "ai",
       links: {
         github: "https://github.com/Shayan5422/Eye-Movement",
-        live: "#",
+        live: "https://www.linkedin.com/posts/shayan-hashemi-5308081b1_introducing-my-new-project-eye-and-eyebrow-activity-7260799949385166848-Q5Ur?utm_source=share&utm_medium=member_desktop&rcm=ACoAADFraPQBLoxdHsfQpTxjdQ403u9R40EJ3II",
       },
     },
   ]

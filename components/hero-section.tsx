@@ -229,9 +229,21 @@ export default function HeroSection() {
         </motion.div>
 
         <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center">
-          <CyberButton>View Resume</CyberButton>
+          <CyberButton onClick={() => {
+            const element = document.getElementById('about');
+            if (element) element.scrollIntoView({ behavior: 'smooth' });
+          }}>
+            View Resume
+          </CyberButton>
 
-          <CyberButton variant="outline">Contact Me</CyberButton>
+          <CyberButton 
+            variant="outline" 
+            onClick={() => {
+              const element = document.getElementById('contact');
+              if (element) element.scrollIntoView({ behavior: 'smooth' });
+            }}>
+            Contact Me
+          </CyberButton>
         </motion.div>
       </motion.div>
 
