@@ -101,7 +101,7 @@ export default function ContactSection() {
 
               <div className="flex gap-4 mt-8">
                 <a
-                  href="https://www.linkedin.com/in/shayan-hashemi-53080..."
+                  href="https://www.linkedin.com/in/shayan-hashemi-5308081b1/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-gray-900/50 border border-green-500/20 flex items-center justify-center text-green-400 hover:bg-green-400 hover:text-gray-900 transition-colors"
