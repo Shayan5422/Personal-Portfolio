@@ -1,9 +1,13 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { useRef } from "react"
+import { motion, useInView } from "framer-motion"
 import { Briefcase, Calendar } from "lucide-react"
 
 export default function ExperienceSection() {
+  const sectionRef = useRef(null)
+  const isInView = useInView(sectionRef, { once: false, amount: 0.1 })
+
   const experiences = [
     {
       title: "AI Engineer",
@@ -48,11 +52,26 @@ export default function ExperienceSection() {
     },
   ]
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  }
+
   return (
-    <section id="experience" className="py-20 px-4 bg-gray-950 relative">
+    <section id="experience" className="py-20 px-4 bg-gray-950 relative" ref={sectionRef}>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(16,185,129,0.05),transparent_70%)]"></div>
       <div className="container mx-auto max-w-5xl z-10 relative">
-        <div className="flex flex-col items-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-center mb-16"
+        >
           <div className="inline-block bg-green-500/10 px-4 py-1 rounded-full mb-4">
             <h2 className="text-green-400 font-mono text-sm tracking-wider">EXPERIENCE</h2>
           </div>
@@ -61,9 +80,14 @@ export default function ExperienceSection() {
             <span className="text-green-400">/&gt;</span>
           </h3>
           <div className="w-20 h-1 bg-gradient-to-r from-green-400 to-cyan-400"></div>
-        </div>
+        </motion.div>
 
-        <div className="relative">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="relative"
+        >
           {/* Timeline line */}
           <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-green-500/20 transform md:translate-x-[-0.5px]"></div>
 
@@ -73,11 +97,12 @@ export default function ExperienceSection() {
               <div key={index} className={`flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
                 <div className="md:w-1/2 p-4">
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="bg-gray-900/50 border border-green-500/20 hover:border-green-500/50 p-6 rounded-lg transition-all"
+                    initial={{ opacity: 0, y: 20, x: index % 2 === 0 ? -20 : 20 }}
+                    animate={
+                      isInView ? { opacity: 1, y: 0, x: 0 } : { opacity: 0, y: 20, x: index % 2 === 0 ? -20 : 20 }
+                    }
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-gray-900/50 border border-green-500/20 hover:border-green-500/50 p-6 rounded-lg transition-all hover-glow"
                   >
                     <div className="flex items-center mb-4">
                       <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center mr-4">
@@ -102,16 +127,19 @@ export default function ExperienceSection() {
                 <div className="hidden md:block md:w-1/2"></div>
 
                 {/* Timeline dot */}
-                <div
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={isInView ? { scale: 1 } : { scale: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
                   className="absolute left-0 md:left-1/2 transform md:translate-x-[-50%]"
                   style={{ top: `${index * 12 + 6}rem` }}
                 >
                   <div className="w-4 h-4 rounded-full bg-green-400 border-4 border-gray-950"></div>
-                </div>
+                </motion.div>
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )
