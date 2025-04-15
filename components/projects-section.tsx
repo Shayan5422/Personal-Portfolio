@@ -197,6 +197,8 @@ export default function ProjectsSection() {
                         <div className="flex gap-2">
                           <motion.a
                             href={project.links.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             whileHover={{ scale: 1.1, y: -5 }}
                             whileTap={{ scale: 0.9 }}
                             className="w-10 h-10 rounded-full bg-gray-900/80 flex items-center justify-center text-green-400 hover:bg-green-400 hover:text-gray-900 transition-colors"
@@ -205,6 +207,8 @@ export default function ProjectsSection() {
                           </motion.a>
                           <motion.a
                             href={project.links.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             whileHover={{ scale: 1.1, y: -5 }}
                             whileTap={{ scale: 0.9 }}
                             className="w-10 h-10 rounded-full bg-gray-900/80 flex items-center justify-center text-green-400 hover:bg-green-400 hover:text-gray-900 transition-colors"

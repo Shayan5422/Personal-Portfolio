@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import GlitchText from "./glitch-text"
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -73,7 +74,7 @@ export default function ContactSection() {
             <h2 className="text-green-400 font-mono text-sm tracking-wider">CONTACT</h2>
           </div>
           <h3 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-            <span className="text-green-400">&lt;</span> Get In Touch <span className="text-green-400">/&gt;</span>
+            <span className="text-green-400">&lt;</span> <GlitchText text="Get In Touch" /> <span className="text-green-400">/&gt;</span>
           </h3>
           <div className="w-20 h-1 bg-gradient-to-r from-green-400 to-cyan-400"></div>
         </motion.div>

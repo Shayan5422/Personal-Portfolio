@@ -3,6 +3,7 @@
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { Briefcase, Calendar } from "lucide-react"
+import GlitchText from "./glitch-text"
 
 export default function ExperienceSection() {
   const sectionRef = useRef(null)
@@ -76,7 +77,7 @@ export default function ExperienceSection() {
             <h2 className="text-green-400 font-mono text-sm tracking-wider">EXPERIENCE</h2>
           </div>
           <h3 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-            <span className="text-green-400">&lt;</span> Professional Journey{" "}
+            <span className="text-green-400">&lt;</span> <GlitchText text="Professional Journey" />{" "}
             <span className="text-green-400">/&gt;</span>
           </h3>
           <div className="w-20 h-1 bg-gradient-to-r from-green-400 to-cyan-400"></div>
