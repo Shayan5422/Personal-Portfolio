@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react"
 import { motion, useInView, AnimatePresence } from "framer-motion"
-import { ExternalLink, Github, Brain, Database, Server, Globe, Eye, Scan } from "lucide-react"
+import { ExternalLink, Github, Brain, Database, Server, Globe, Eye, Scan, Clock } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import GlitchText from "./glitch-text"
@@ -14,6 +14,18 @@ export default function ProjectsSection() {
   const isInView = useInView(sectionRef, { once: false, amount: 0.1 })
 
   const projects = [
+    {
+      title: "FocusFlow",
+      description:
+        "A modern productivity web application designed to help users stay focused and maximize productivity with a combination of focus timers, background sounds, and breathing exercises.",
+      icon: <Clock className="h-16 w-16 text-green-400" />,
+      tags: ["TypeScript", "React", "Tailwind CSS", "Node.js", "Express", "Spotify API"],
+      category: "web",
+      links: {
+        github: "https://github.com/Shayan5422/FocusFlow",
+        live: "https://stay-focusly.vercel.app/",
+      },
+    },
     {
       title: "Mac Control MCP Server",
       description:
