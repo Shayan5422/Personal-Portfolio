@@ -3,7 +3,7 @@
 import type React from "react"
 import { useState, useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import { Send, Mail, Phone, MapPin, Linkedin, Github } from "lucide-react"
+import { Send, Mail, Phone, MapPin, Linkedin, Github, Coffee } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
@@ -166,6 +166,16 @@ export default function ContactSection() {
                   className="w-12 h-12 rounded-full bg-gray-900/50 border border-green-500/20 flex items-center justify-center text-green-400 hover:bg-green-400 hover:text-gray-900 transition-colors"
                 >
                   <Github className="h-5 w-5" />
+                </motion.a>
+                <motion.a
+                  href="https://buymeacoffee.com/shayanhshm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -5 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-12 h-12 rounded-full bg-gray-900/50 border border-green-500/20 flex items-center justify-center text-green-400 hover:bg-green-400 hover:text-gray-900 transition-colors"
+                >
+                  <Coffee className="h-5 w-5" />
                 </motion.a>
               </div>
             </div>
