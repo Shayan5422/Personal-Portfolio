@@ -160,7 +160,7 @@ export default function AboutSection() {
                       background in nutrition and food sciences gives me a unique perspective on health-related AI
                       applications.
                     </p>
-                    <div className="grid grid-cols-2 gap-4 mt-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                       <div>
                         <p className="text-gray-400 mb-1">Name:</p>
                         <p className="font-medium">Shayan Hashemi</p>
