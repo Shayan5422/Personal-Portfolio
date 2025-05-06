@@ -98,6 +98,17 @@ export default function ProjectsSection() {
         live: "https://www.linkedin.com/posts/shayan-hashemi-5308081b1_introducing-my-new-project-eye-and-eyebrow-activity-7260799949385166848-Q5Ur?utm_source=share&utm_medium=member_desktop&rcm=ACoAADFraPQBLoxdHsfQpTxjdQ403u9R40EJ3II",
       },
     },
+    {
+      title: "Hugging Face Model Search",
+      description: "This web application helps you find the best model on Hugging Face based on your text description, using semantic similarity.",
+      icon: <Brain className="h-16 w-16 text-green-400" />,
+      tags: ["AI", "Semantic Search", "Model Discovery", "Hugging Face"],
+      category: "ai",
+      links: {
+        github: "#", // GitHub link not provided, using placeholder
+        live: "https://rag-huggingface.vercel.app/",
+      },
+    }
   ]
 
   const filteredProjects =
