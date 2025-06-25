@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react"
 import { motion, useInView, AnimatePresence } from "framer-motion"
-import { ExternalLink, Github, Brain, Database, Server, Globe, Eye, Scan, Clock } from "lucide-react"
+import { ExternalLink, Github, Brain, Database, Server, Globe, Eye, Scan, Clock, Gift } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import GlitchText from "./glitch-text"
@@ -14,6 +14,18 @@ export default function ProjectsSection() {
   const isInView = useInView(sectionRef, { once: false, amount: 0.1 })
 
   const projects = [
+    {
+      title: "GiftSync",
+      description:
+        "A birthday wishlist sharing web application that allows users to create gift lists, share them with friends and family, and avoid duplicate gifts. Features include item claiming, price ranges, direct purchase links, and mobile-friendly design.",
+      icon: <Gift className="h-16 w-16 text-green-400" />,
+      tags: ["Next.js", "TypeScript", "React", "Web Development", "Responsive Design"],
+      category: "web",
+      links: {
+        github: "https://github.com/Shayan5422/gift-site",
+        live: "https://giftsync.vercel.app/",
+      },
+    },
     {
       title: "Hugging Face Model Search",
       description: "This web application helps you find the best model on Hugging Face based on your text description, using semantic similarity.",
