@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react"
 import { motion, useInView, AnimatePresence } from "framer-motion"
-import { ExternalLink, Github, Brain, Database, Server, Globe, Eye, Scan, Clock, Gift } from "lucide-react"
+import { ExternalLink, Github, Brain, Database, Server, Globe, Eye, Scan, Clock, Gift, FileText } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import GlitchText from "./glitch-text"
@@ -14,6 +14,18 @@ export default function ProjectsSection() {
   const isInView = useInView(sectionRef, { once: false, amount: 0.1 })
 
   const projects = [
+    {
+      title: "DOCX to LaTeX Converter",
+      description:
+        "A professional web application that converts Word documents to LaTeX format with advanced features including image extraction, Overleaf compatibility, style preservation, and automatic table of contents generation. Features a modern API and web interface.",
+      icon: <FileText className="h-16 w-16 text-green-400" />,
+      tags: ["Python", "Next.js", "TypeScript", "LaTeX", "API", "Document Processing"],
+      category: "web",
+      links: {
+        github: "https://github.com/Shayan5422/Docx_to_latex",
+        live: "https://docx-to-latex.vercel.app/",
+      },
+    },
     {
       title: "GiftSync",
       description:
