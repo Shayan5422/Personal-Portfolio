@@ -15,6 +15,18 @@ export default function ProjectsSection() {
 
   const projects = [
     {
+      title: "TextComparePro",
+      description:
+        "A professional text comparison tool with advanced diff analysis. Features include: word/character comparison, case sensitivity, punctuation handling, whitespace control, colored diff, statistics dashboard, and dark/light theme support.",
+      icon: <FileText className="h-16 w-16 text-green-400" />,
+      tags: ["React", "TypeScript", "Tailwind CSS", "Express.js", "Vite", "Radix UI"],
+      category: "web",
+      links: {
+        github: "https://github.com/Shayan5422/TextComparePro",
+        live: "https://diffind.vercel.app/",
+      },
+    },
+    {
       title: "DOCX to LaTeX Converter",
       description:
         "A professional web application that converts Word documents to LaTeX format with advanced features including image extraction, Overleaf compatibility, style preservation, and automatic table of contents generation. Features a modern API and web interface.",
