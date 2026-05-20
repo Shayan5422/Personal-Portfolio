@@ -93,7 +93,7 @@ export default function MinecraftPortfolio() {
   }, [])
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden bg-[#8ecbff]">
+    <div className="game-viewport relative bg-[#8ecbff]">
       <MinecraftWorld
         active={active}
         paused={paused || !!openSection || !started || gameOver}

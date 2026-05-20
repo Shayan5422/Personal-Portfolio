@@ -15,11 +15,32 @@ html,
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   background: var(--mc-bg);
   color: #fff;
   image-rendering: pixelated;
   -webkit-font-smoothing: antialiased;
+}
+
+.game-viewport {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+@supports (height: 100dvh) {
+  .game-viewport {
+    width: 100dvw;
+    height: 100dvh;
+    max-width: 100dvw;
+    max-height: 100dvh;
+  }
 }
 
 /* Pixelated rendering everywhere */
