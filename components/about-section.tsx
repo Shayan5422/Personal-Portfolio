@@ -258,12 +258,7 @@ export default function AboutSection() {
 
           <div className="mt-8 flex justify-center">
             <CyberButton onClick={() => {
-              const link = document.createElement('a');
-              link.href = '/Newwithlink.pdf';
-              link.download = 'Newwithlink.pdf';
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
+              window.open('/Newwithlink.pdf', '_blank', 'noopener,noreferrer');
             }}>Download Full CV</CyberButton>
           </div>
         </motion.div>

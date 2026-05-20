@@ -55,6 +55,10 @@ export default function MinecraftPortfolio() {
   }, [gameOver])
 
   const onSectionBreak = useCallback((id: SectionId) => {
+    if (document.pointerLockElement) {
+      document.exitPointerLock?.()
+    }
+    mobileInputRef.current.breaking = false
     setDiscovered((prev) => {
       const next = new Set(prev)
       next.add(id)
@@ -93,7 +97,7 @@ export default function MinecraftPortfolio() {
   }, [])
 
   return (
-    <div className="game-viewport relative bg-[#8ecbff]">
+    <div className="game-viewport mc-cursor relative bg-[#8ecbff]">
       <MinecraftWorld
         active={active}
         paused={paused || !!openSection || !started || gameOver}

@@ -206,7 +206,11 @@ export default function InfoPanel({ sectionId, onClose }: Props) {
                 <a
                   key={l.href}
                   href={l.href}
-                  target={l.href.startsWith("http") ? "_blank" : undefined}
+                  target={
+                    l.href.startsWith("http") || l.href.endsWith(".pdf")
+                      ? "_blank"
+                      : undefined
+                  }
                   rel="noopener noreferrer"
                   className="mc-button px-4 py-2 font-mono text-sm"
                 >
