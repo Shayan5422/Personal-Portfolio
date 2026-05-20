@@ -172,7 +172,7 @@ export default function AboutSection() {
                         </div>
                         <div>
                           <p className="text-gray-400 mb-1">Email:</p>
-                          <p className="font-medium">shayan.hashemi.etu@univ-lille.fr</p>
+                          <p className="font-medium">shayan@alasuite.com</p>
                         </div>
                         <div>
                           <p className="text-gray-400 mb-1">Phone:</p>
